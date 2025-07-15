@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Editorial - Dani Ody Nedel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFFFFF;
+            color: #2D3748;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #FF776A, #6EC3FF);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .linha-editorial {
+            background-color: #F9E5C3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #FF776A;
+        }
+
+        .linha-editorial h2 {
+            color: #FF776A;
+            margin-bottom: 10px;
+        }
+
+        .linha-editorial p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #2D3748;
+        }
+
+        .semana {
+            margin-bottom: 40px;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .semana-header {
+            background: linear-gradient(135deg, #6EC3FF, #FF776A);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .semana-header h2 {
+            font-size: 1.8em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .dias-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .dia {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .dia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .dia.inativo {
+            background-color: #f8f9fa;
+            color: #ccc;
+            cursor: default;
+        }
+
+        .dia.inativo:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .dia.com-post {
+            background: linear-gradient(135deg, #F9E5C3, #FFFFFF);
+            border: 2px solid #FF776A;
+        }
+
+        .dia.com-post:hover {
+            background: linear-gradient(135deg, #FF776A, #6EC3FF);
+            color: white;
+        }
+
+        .dia-nome {
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .dia-numero {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .post-preview {
+            font-size: 0.8em;
+            color: #FF776A;
+            font-weight: bold;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: #FFFFFF;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #FF776A;
+        }
+
+        .modal h3 {
+            color: #FF776A;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+        }
+
+        .modal-section h4 {
+            color: #6EC3FF;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .hashtag {
+            background-color: #6EC3FF;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .formato-badge {
+            display: inline-block;
+            background-color: #FF776A;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .estrategias {
+            background-color: #F9E5C3;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .estrategias h3 {
+            color: #FF776A;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .estrategias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .estrategia-card {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #6EC3FF;
+        }
+
+        .estrategia-card h4 {
+            color: #2D3748;
+            margin-bottom: 15px;
+        }
+
+        .estrategia-card ul {
+            list-style: none;
+        }
+
+        .estrategia-card li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .estrategia-card li:before {
+            content: "•";
+            color: #FF776A;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #2D3748;
+            color: white;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .dias-grid {
+                grid-template-columns: repeat(7, 1fr);
+                gap: 1px;
+                padding: 10px;
+            }
+            
+            .dia {
+                padding: 8px;
+                min-height: 80px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 Calendário Editorial</h1>
+            <p>Dani Ody Nedel</p>
+        </div>
+
+        <div class="linha-editorial">
+            <h2>🌟 Linha Editorial</h2>
+            <p>"Cada olhar carrega um mundo"</p>
+        </div>
+
+        <!-- SEMANA 1 -->
+        <div class="semana">
+            <div class="semana-header">
+                <h2>Semana 1</h2>
+            </div>
+            <div class="dias-grid">
+                <div class="dia com-post" onclick="abrirModal('post1')">
+                    <div class="dia-nome">SEG</div>
+                    <div class="dia-numero">1</div>
+                    <div class="post-preview">Vídeo</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">TER</div>
+                    <div class="dia-numero">2</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post2')">
+                    <div class="dia-nome">QUA</div>
+                    <div class="dia-numero">3</div>
+                    <div class="post-preview">Foto</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">QUI</div>
+                    <div class="dia-numero">4</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post3')">
+                    <div class="dia-nome">SEX</div>
+                    <div class="dia-numero">5</div>
+                    <div class="post-preview">Carrossel</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">SAB</div>
+                    <div class="dia-numero">6</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">DOM</div>
+                    <div class="dia-numero">7</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 2 -->
+        <div class="semana">
+            <div class="semana-header">
+                <h2>Semana 2</h2>
+            </div>
+            <div class="dias-grid">
+                <div class="dia com-post" onclick="abrirModal('post4')">
+                    <div class="dia-nome">SEG</div>
+                    <div class="dia-numero">8</div>
+                    <div class="post-preview">Vídeo</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">TER</div>
+                    <div class="dia-numero">9</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post5')">
+                    <div class="dia-nome">QUA</div>
+                    <div class="dia-numero">10</div>
+                    <div class="post-preview">Foto</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">QUI</div>
+                    <div class="dia-numero">11</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post6')">
+                    <div class="dia-nome">SEX</div>
+                    <div class="dia-numero">12</div>
+                    <div class="post-preview">Carrossel</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">SAB</div>
+                    <div class="dia-numero">13</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">DOM</div>
+                    <div class="dia-numero">14</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 3 -->
+        <div class="semana">
+            <div class="semana-header">
+                <h2>Semana 3</h2>
+            </div>
+            <div class="dias-grid">
+                <div class="dia com-post" onclick="abrirModal('post7')">
+                    <div class="dia-nome">SEG</div>
+                    <div class="dia-numero">15</div>
+                    <div class="post-preview">Vídeo</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">TER</div>
+                    <div class="dia-numero">16</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post8')">
+                    <div class="dia-nome">QUA</div>
+                    <div class="dia-numero">17</div>
+                    <div class="post-preview">Foto</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">QUI</div>
+                    <div class="dia-numero">18</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post9')">
+                    <div class="dia-nome">SEX</div>
+                    <div class="dia-numero">19</div>
+                    <div class="post-preview">Carrossel</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">SAB</div>
+                    <div class="dia-numero">20</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">DOM</div>
+                    <div class="dia-numero">21</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMANA 4 -->
+        <div class="semana">
+            <div class="semana-header">
+                <h2>Semana 4</h2>
+            </div>
+            <div class="dias-grid">
+                <div class="dia com-post" onclick="abrirModal('post10')">
+                    <div class="dia-nome">SEG</div>
+                    <div class="dia-numero">22</div>
+                    <div class="post-preview">Vídeo</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">TER</div>
+                    <div class="dia-numero">23</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post11')">
+                    <div class="dia-nome">QUA</div>
+                    <div class="dia-numero">24</div>
+                    <div class="post-preview">Foto</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">QUI</div>
+                    <div class="dia-numero">25</div>
+                </div>
+                <div class="dia com-post" onclick="abrirModal('post12')">
+                    <div class="dia-nome">SEX</div>
+                    <div class="dia-numero">26</div>
+                    <div class="post-preview">Carrossel</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">SAB</div>
+                    <div class="dia-numero">27</div>
+                </div>
+                <div class="dia inativo">
+                    <div class="dia-nome">DOM</div>
+                    <div class="dia-numero">28</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estratégias -->
+        <div class="estrategias">
+            <h3>🎯 Estratégias de Engajamento</h3>
+            <div class="estrategias-grid">
+                <div class="estrategia-card">
+                    <h4>💬 Perguntas para Interação</h4>
+                    <ul>
+                        <li>"E você, o que te inspira a recomeçar?"</li>
+                        <li>"Qual pequeno detalhe fez seu dia mais bonito hoje?"</li>
+                        <li>"O que você diria para si mesmo(a) de 5 anos atrás?"</li>
+                        <li>"Qual foi sua última descoberta sobre você?"</li>
+                    </ul>
+                </div>
+                <div class="estrategia-card">
+                    <h4>⏰ Horários Recomendados</h4>
+                    <ul>
+                        <li><strong>Segunda:</strong> 8h (início da semana com energia positiva)</li>
+                        <li><strong>Quarta:</strong> 18h (meio da semana, momento de reflexão)</li>
+                        <li><strong>Sexta:</strong> 12h (final da semana, celebração)</li>
+                    </ul>
+                </div>
+                <div class="estrategia-card">
+                    <h4>📝 Observações Importantes</h4>
+                    <ul>
+                        <li>Manter sempre um vídeo por semana</li>
+                        <li>Equilibrar conteúdo pessoal com reflexões universais</li>
+                        <li>Usar a linha editorial como norte</li>
+                        <li>Manter o tom inspirador sem ser excessivamente motivacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Desenvolvido por <strong>John Delmiro - Marketing & IA para Negócios</strong></p>
+        </div>
+    </div>
+
+    <!-- Modais -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        const posts = {
+            post1: {
+                formato: "Vídeo da Dani (estilo vlog)",
+                tema: "A arte de começar de novo",
+                sugestao: "Dani falando diretamente para a câmera sobre segundas-feiras como oportunidades de recomeço, conectando com a ideia de que cada dia é uma nova página em branco",
+                hashtags: ["#novocomeco", "#reflexao", "#segundafeira", "#oportunidades", "#vidasimples"],
+                horario: "8h",
+                dicas: "💡 Comece com uma reflexão pessoal sobre recomeços. Seja autêntica e vulnerável. Use a luz natural da manhã para criar uma atmosfera inspiradora."
+            },
+            post2: {
+                formato: "Foto pessoal da Dani",
+                tema: "Autenticidade no cotidiano",
+                sugestao: "Foto espontânea dela em um momento simples do dia, com reflexão sobre ser genuína",
+                hashtags: ["#autenticidade", "#vidareal", "#momentopresente", "#autoestima", "#inspiracaododia"],
+                horario: "18h",
+                dicas: "💡 Capture um momento natural, sem pose. A legenda deve ser pessoal e conectar com as experiências dos seguidores."
+            },
+            post3: {
+                formato: "Carrossel de fotos de gastronomia/café da manhã",
+                tema: "Ritual matinal",
+                sugestao: "Sequência de fotos: mesa de café da manhã especial com pratos coloridos, focando na importância dos pequenos rituais",
+                hashtags: ["#cafedamanha", "#ritualmatinal", "#gastronomia", "#momentosespeciais", "#gratidao"],
+                horario: "12h",
+                dicas: "💡 Crie um carrossel com 3-5 fotos: visão geral da mesa, detalhes dos pratos, uma foto sua aproveitando o momento. Use cores vibrantes."
+            },
+            post4: {
+                formato: "Vídeo da Dani (estilo vlog)",
+                tema: "Lições que a vida ensina",
+                sugestao: "Dani falando diretamente para a câmera contando uma pequena história/experiência pessoal que trouxe aprendizado",
+                hashtags: ["#licoedevida", "#reflexao", "#crescimento", "#sabedoria", "#experiencias"],
+                horario: "8h",
+                dicas: "💡 Compartilhe uma história pessoal recente. Seja específica nos detalhes e clara na lição aprendida. Conecte com experiências universais."
+            },
+            post5: {
+                formato: "Foto da natureza/paisagem",
+                tema: "Conexão com o divino",
+                sugestao: "Foto do céu, mar ou plantas com reflexão sobre como a natureza nos conecta com algo maior",
+                hashtags: ["#natureza", "#conexaodivina", "#contemplacao", "#belezanatural", "#momentodeDeus"],
+                horario: "18h",
+                dicas: "💡 Capture durante o golden hour. Use a natureza como metáfora para reflexões espirituais. Seja inclusiva em suas referências."
+            },
+            post6: {
+                formato: "Carrossel de fotos com amigos/evento social",
+                tema: "Importância das conexões humanas",
+                sugestao: "Sequência de fotos de um encontro, jantar ou evento, destacando a riqueza dos relacionamentos",
+                hashtags: ["#conexao", "#amizade", "#relacionamentos", "#vibracoespositivas", "#momentoscompartilhados"],
+                horario: "12h",
+                dicas: "💡 Mostre diferentes momentos do encontro. Peça permissão para postar fotos dos amigos. Foque na emoção e conexão genuína."
+            },
+            post7: {
+                formato: "Vídeo da Dani (estilo vlog)",
+                tema: "Pausa e respiração",
+                sugestao: "Dani falando diretamente para a câmera sobre a importância de desacelerar, podendo incluir fotos de momentos de pausa (ondas, vento, natureza) durante a narração",
+                hashtags: ["#pausa", "#respiracao", "#mindfulness", "#pazinterior", "#momentodeluz"],
+                horario: "8h",
+                dicas: "💡 Fale mais devagar que o normal. Inclua momentos de silêncio. Use b-roll de natureza para ilustrar a calma que está transmitindo."
+            },
+            post8: {
+                formato: "Foto pessoal da Dani",
+                tema: "Gratidão pessoal",
+                sugestao: "Foto dela em um momento de gratidão, conectando com alguma conquista ou momento especial",
+                hashtags: ["#gratidao", "#conquistas", "#autoamor", "#reflexoesdiarias", "#forcainterior"],
+                horario: "18h",
+                dicas: "💡 Escolha uma conquista recente, pequena ou grande. Seja específica sobre o que te deixa grata. Inspire outros a reconhecerem suas próprias conquistas."
+            },
+            post9: {
+                formato: "Carrossel de fotos",
+                tema: "Detalhes que encantam",
+                sugestao: "Sequência de fotos de pequenos detalhes bonitos do cotidiano (flores, texturas, luzes)",
+                hashtags: ["#detalhesqueencantam", "#pequenasalegrias", "#belezasimples", "#olhardiferente"],
+                horario: "12h",
+                dicas: "💡 Foque na fotografia macro ou close-up. Brinque com luz e sombra. Cada foto deve contar uma pequena história visual."
+            },
+            post10: {
+                formato: "Vídeo da Dani (estilo vlog)",
+                tema: "Coragem para sonhar",
+                sugestao: "Dani falando diretamente para a câmera sobre ter coragem para seguir sonhos, mesmo quando parece impossível",
+                hashtags: ["#coragem", "#sonhos", "#fe", "#determinacao", "#vivaossonhos"],
+                horario: "8h",
+                dicas: "💡 Compartilhe um sonho pessoal ou uma meta. Seja honesta sobre os medos e desafios. Termine com uma call-to-action inspiradora."
+            },
+            post11: {
+                formato: "Foto de elemento da natureza",
+                tema: "Ciclos da vida",
+                sugestao: "Foto de algo que represente renovação (lua, árvore, flores) com reflexão sobre os ciclos naturais da vida",
+                hashtags: ["#ciclodavida", "#renovacao", "#natureza", "#transformacao", "#crescimento"],
+                horario: "18h",
+                dicas: "💡 Escolha elementos que mostrem transformação (botões de flor, folhas mudando de cor, fases da lua). Use a natureza como metáfora para mudanças pessoais."
+            },
+            post12: {
+                formato: "Carrossel de fotos pessoais da Dani",
+                tema: "Celebração de si mesma",
+                sugestao: "Sequência de fotos dela em momentos de alegria, com texto sobre celebrar as próprias conquistas e jornada",
+                hashtags: ["#celebracao", "#autoestima", "#jornada", "#mulheresinspiradoras", "#orgulhodemim"],
+                horario: "12h",
+                dicas: "💡 Crie um carrossel que conte sua jornada. Misture fotos antigas e recentes. Celebre crescimento, não apenas conquistas externas."
+            }
+        };
+
+        function abrirModal(postId) {
+            const post = posts[postId];
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+
+            modalBody.innerHTML = `
+                <div class="formato-badge">${post.formato}</div>
+                <h3>${post.tema}</h3>
+                
+                <div class="modal-section">
+                    <h4>📝 Sugestão</h4>
+                    <p>${post.sugestao}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>⏰ Horário Recomendado</h4>
+                    <p>${post.horario}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>💡 Dicas Extras</h4>
+                    <p>${post.dicas}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>#️⃣ Hashtags</h4>
+                    <div class="hashtags">
+                        ${post.hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Fechar modal clicando fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                fecharModal();
+            }
+        });
+    </script>
+</body>
+</html>
