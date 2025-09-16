@@ -58,24 +58,44 @@
             color: #2D3748;
         }
 
-        .semana {
-            margin-bottom: 40px;
+        .mes {
+            margin-bottom: 50px;
             background-color: #FFFFFF;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             overflow: hidden;
         }
 
-        .semana-header {
+        .mes-header {
             background: linear-gradient(135deg, #6EC3FF, #FF776A);
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
 
-        .semana-header h2 {
-            font-size: 1.8em;
+        .mes-header h2 {
+            font-size: 2em;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .semana {
+            margin-bottom: 30px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .semana-header {
+            background: linear-gradient(135deg, #F9E5C3, #FFFFFF);
+            color: #2D3748;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #FF776A;
+        }
+
+        .semana-header h3 {
+            font-size: 1.3em;
+            color: #FF776A;
         }
 
         .dias-grid {
@@ -318,7 +338,7 @@
     <div class="container">
         <div class="header">
             <h1>📅 Calendário Editorial</h1>
-            <p>Dani Ody Nedel</p>
+            <p>Dani Ody Nedel - Outubro a Dezembro 2025</p>
         </div>
 
         <div class="linha-editorial">
@@ -326,162 +346,675 @@
             <p>"Cada olhar carrega um mundo"</p>
         </div>
 
-        <!-- SEMANA 1 -->
-        <div class="semana">
-            <div class="semana-header">
-                <h2>Semana 1</h2>
+        <!-- SETEMBRO 2025 (Início) -->
+        <div class="mes">
+            <div class="mes-header">
+                <h2>Setembro 2025</h2>
             </div>
-            <div class="dias-grid">
-                <div class="dia com-post" onclick="abrirModal('post1')">
-                    <div class="dia-nome">SEG</div>
-                    <div class="dia-numero">1</div>
-                    <div class="post-preview">Vídeo</div>
+            
+            <!-- Semana 5 de Setembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 5 - Final de Setembro</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">TER</div>
-                    <div class="dia-numero">2</div>
-                </div>
-                <div class="dia com-post" onclick="abrirModal('post2')">
-                    <div class="dia-nome">QUA</div>
-                    <div class="dia-numero">3</div>
-                    <div class="post-preview">Foto</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">QUI</div>
-                    <div class="dia-numero">4</div>
-                </div>
-                <div class="dia com-post" onclick="abrirModal('post3')">
-                    <div class="dia-nome">SEX</div>
-                    <div class="dia-numero">5</div>
-                    <div class="post-preview">Carrossel</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">SAB</div>
-                    <div class="dia-numero">6</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">DOM</div>
-                    <div class="dia-numero">7</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEMANA 2 -->
-        <div class="semana">
-            <div class="semana-header">
-                <h2>Semana 2</h2>
-            </div>
-            <div class="dias-grid">
-                <div class="dia com-post" onclick="abrirModal('post4')">
-                    <div class="dia-nome">SEG</div>
-                    <div class="dia-numero">8</div>
-                    <div class="post-preview">Vídeo</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">TER</div>
-                    <div class="dia-numero">9</div>
-                </div>
-                <div class="dia com-post" onclick="abrirModal('post5')">
-                    <div class="dia-nome">QUA</div>
-                    <div class="dia-numero">10</div>
-                    <div class="post-preview">Foto</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">QUI</div>
-                    <div class="dia-numero">11</div>
-                </div>
-                <div class="dia com-post" onclick="abrirModal('post6')">
-                    <div class="dia-nome">SEX</div>
-                    <div class="dia-numero">12</div>
-                    <div class="post-preview">Carrossel</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">SAB</div>
-                    <div class="dia-numero">13</div>
-                </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">DOM</div>
-                    <div class="dia-numero">14</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">29</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('set_s5_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">30</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">1</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">2</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">3</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">4</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">5</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- SEMANA 3 -->
-        <div class="semana">
-            <div class="semana-header">
-                <h2>Semana 3</h2>
+        <!-- OUTUBRO 2025 -->
+        <div class="mes">
+            <div class="mes-header">
+                <h2>Outubro 2025</h2>
             </div>
-            <div class="dias-grid">
-                <div class="dia com-post" onclick="abrirModal('post7')">
-                    <div class="dia-nome">SEG</div>
-                    <div class="dia-numero">15</div>
-                    <div class="post-preview">Vídeo</div>
+            
+            <!-- Semana 1 de Outubro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 1</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">TER</div>
-                    <div class="dia-numero">16</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">29</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">30</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s1_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">1</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s1_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">2</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s1_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">3</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">4</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">5</div>
+                    </div>
                 </div>
-                <div class="dia com-post" onclick="abrirModal('post8')">
-                    <div class="dia-nome">QUA</div>
-                    <div class="dia-numero">17</div>
-                    <div class="post-preview">Foto</div>
+            </div>
+
+            <!-- Semana 2 de Outubro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 2</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">QUI</div>
-                    <div class="dia-numero">18</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">6</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s2_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">7</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s2_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">8</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s2_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">9</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s2_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">10</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">11</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">12</div>
+                    </div>
                 </div>
-                <div class="dia com-post" onclick="abrirModal('post9')">
-                    <div class="dia-nome">SEX</div>
-                    <div class="dia-numero">19</div>
-                    <div class="post-preview">Carrossel</div>
+            </div>
+
+            <!-- Semana 3 de Outubro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 3</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">SAB</div>
-                    <div class="dia-numero">20</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">13</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s3_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">14</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s3_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">15</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s3_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">16</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s3_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">17</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">18</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">19</div>
+                    </div>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">DOM</div>
-                    <div class="dia-numero">21</div>
+            </div>
+
+            <!-- Semana 4 de Outubro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 4</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">20</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s4_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">21</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s4_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">22</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s4_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">23</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s4_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">24</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">25</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">26</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 5 de Outubro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 5</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">27</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s5_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">28</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s5_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">29</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s5_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">30</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('out_s5_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">31</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">1</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">2</div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- SEMANA 4 -->
-        <div class="semana">
-            <div class="semana-header">
-                <h2>Semana 4</h2>
+        <!-- NOVEMBRO 2025 -->
+        <div class="mes">
+            <div class="mes-header">
+                <h2>Novembro 2025</h2>
             </div>
-            <div class="dias-grid">
-                <div class="dia com-post" onclick="abrirModal('post10')">
-                    <div class="dia-nome">SEG</div>
-                    <div class="dia-numero">22</div>
-                    <div class="post-preview">Vídeo</div>
+            
+            <!-- Semana 1 de Novembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 1</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">TER</div>
-                    <div class="dia-numero">23</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">27</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">28</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">29</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">30</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">31</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">1</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">2</div>
+                    </div>
                 </div>
-                <div class="dia com-post" onclick="abrirModal('post11')">
-                    <div class="dia-nome">QUA</div>
-                    <div class="dia-numero">24</div>
-                    <div class="post-preview">Foto</div>
+            </div>
+
+            <!-- Semana 2 de Novembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 2</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">QUI</div>
-                    <div class="dia-numero">25</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">3</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s2_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">4</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s2_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">5</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s2_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">6</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s2_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">7</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">8</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">9</div>
+                    </div>
                 </div>
-                <div class="dia com-post" onclick="abrirModal('post12')">
-                    <div class="dia-nome">SEX</div>
-                    <div class="dia-numero">26</div>
-                    <div class="post-preview">Carrossel</div>
+            </div>
+
+            <!-- Semana 3 de Novembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 3</h3>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">SAB</div>
-                    <div class="dia-numero">27</div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">10</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s3_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">11</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s3_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">12</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s3_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">13</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s3_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">14</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">15</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">16</div>
+                    </div>
                 </div>
-                <div class="dia inativo">
-                    <div class="dia-nome">DOM</div>
-                    <div class="dia-numero">28</div>
+            </div>
+
+            <!-- Semana 4 de Novembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 4</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">17</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s4_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">18</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s4_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">19</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s4_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">20</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s4_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">21</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">22</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">23</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 5 de Novembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 5</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">24</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s5_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">25</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s5_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">26</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s5_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">27</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('nov_s5_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">28</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">29</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEZEMBRO 2025 -->
+        <div class="mes">
+            <div class="mes-header">
+                <h2>Dezembro 2025</h2>
+            </div>
+            
+            <!-- Semana 1 de Dezembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 1</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">1</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s1_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">2</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s1_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">3</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s1_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">4</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s1_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">5</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">6</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 2 de Dezembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 2</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">8</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s2_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">9</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s2_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">10</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s2_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">11</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s2_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">12</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">13</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">14</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 3 de Dezembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 3</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">15</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s3_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">16</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s3_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">17</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s3_qui')">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">18</div>
+                        <div class="post-preview">#TBT</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s3_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">19</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">20</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">21</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 4 de Dezembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 4</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">22</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s4_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">23</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s4_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">24</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">25</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s4_sex')">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">26</div>
+                        <div class="post-preview">Vídeo</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">27</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">28</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana 5 de Dezembro -->
+            <div class="semana">
+                <div class="semana-header">
+                    <h3>Semana 5</h3>
+                </div>
+                <div class="dias-grid">
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEG</div>
+                        <div class="dia-numero">29</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s5_ter')">
+                        <div class="dia-nome">TER</div>
+                        <div class="dia-numero">30</div>
+                        <div class="post-preview">Foto Única</div>
+                    </div>
+                    <div class="dia com-post" onclick="abrirModal('dez_s5_qua')">
+                        <div class="dia-nome">QUA</div>
+                        <div class="dia-numero">31</div>
+                        <div class="post-preview">Carrossel IA</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">QUI</div>
+                        <div class="dia-numero">1</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SEX</div>
+                        <div class="dia-numero">2</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">SAB</div>
+                        <div class="dia-numero">3</div>
+                    </div>
+                    <div class="dia inativo">
+                        <div class="dia-nome">DOM</div>
+                        <div class="dia-numero">4</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -502,15 +1035,17 @@
                 <div class="estrategia-card">
                     <h4>⏰ Horários Recomendados</h4>
                     <ul>
-                        <li><strong>Segunda:</strong> 8h (início da semana com energia positiva)</li>
-                        <li><strong>Quarta:</strong> 18h (meio da semana, momento de reflexão)</li>
-                        <li><strong>Sexta:</strong> 12h (final da semana, celebração)</li>
+                        <li><strong>Terça:</strong> 18h (horário padrão para todos os posts)</li>
+                        <li><strong>Quarta:</strong> 18h (horário padrão para todos os posts)</li>
+                        <li><strong>Quinta:</strong> 18h (horário padrão para todos os posts)</li>
+                        <li><strong>Sexta:</strong> 18h (horário padrão para todos os posts)</li>
                     </ul>
                 </div>
                 <div class="estrategia-card">
                     <h4>📝 Observações Importantes</h4>
                     <ul>
-                        <li>Manter sempre um vídeo por semana</li>
+                        <li>Manter sempre um vídeo por semana (sextas)</li>
+                        <li>Carrosséis de IA sempre nas quartas</li>
                         <li>Equilibrar conteúdo pessoal com reflexões universais</li>
                         <li>Usar a linha editorial como norte</li>
                         <li>Manter o tom inspirador sem ser excessivamente motivacional</li>
@@ -534,157 +1069,508 @@
 
     <script>
         const posts = {
-            post1: {
-                formato: "Vídeo da Dani (estilo vlog)",
-                tema: "A arte de começar de novo",
-                sugestao: "Dani falando diretamente para a câmera sobre segundas-feiras como oportunidades de recomeço, conectando com a ideia de que cada dia é uma nova página em branco",
-                hashtags: ["#novocomeco", "#reflexao", "#segundafeira", "#oportunidades", "#vidasimples"],
-                horario: "8h",
-                dicas: "💡 Comece com uma reflexão pessoal sobre recomeços. Seja autêntica e vulnerável. Use a luz natural da manhã para criar uma atmosfera inspiradora."
-            },
-            post2: {
-                formato: "Foto pessoal da Dani",
-                tema: "Autenticidade no cotidiano",
-                sugestao: "Foto espontânea dela em um momento simples do dia, com reflexão sobre ser genuína",
-                hashtags: ["#autenticidade", "#vidareal", "#momentopresente", "#autoestima", "#inspiracaododia"],
+            // SETEMBRO 2025 - Início
+            set_s5_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Novos Começos",
+                sugestao: "Foto da Dani em um momento de contemplação, olhando para o horizonte ou para cima, simbolizando novos começos e expectativas para o último trimestre do ano",
+                hashtags: ["#novoscomeco", "#setembro", "#reflexao", "#expectativas", "#vidasimples"],
                 horario: "18h",
-                dicas: "💡 Capture um momento natural, sem pose. A legenda deve ser pessoal e conectar com as experiências dos seguidores."
+                dicas: "💡 Use luz natural da manhã. Capture um momento genuíno de reflexão. Conecte com a sensação de recomeço que setembro traz."
             },
-            post3: {
-                formato: "Carrossel de fotos de gastronomia/café da manhã",
-                tema: "Ritual matinal",
-                sugestao: "Sequência de fotos: mesa de café da manhã especial com pratos coloridos, focando na importância dos pequenos rituais",
-                hashtags: ["#cafedamanha", "#ritualmatinal", "#gastronomia", "#momentosespeciais", "#gratidao"],
-                horario: "12h",
-                dicas: "💡 Crie um carrossel com 3-5 fotos: visão geral da mesa, detalhes dos pratos, uma foto sua aproveitando o momento. Use cores vibrantes."
-            },
-            post4: {
-                formato: "Vídeo da Dani (estilo vlog)",
-                tema: "Lições que a vida ensina",
-                sugestao: "Dani falando diretamente para a câmera contando uma pequena história/experiência pessoal que trouxe aprendizado",
-                hashtags: ["#licoedevida", "#reflexao", "#crescimento", "#sabedoria", "#experiencias"],
-                horario: "8h",
-                dicas: "💡 Compartilhe uma história pessoal recente. Seja específica nos detalhes e clara na lição aprendida. Conecte com experiências universais."
-            },
-            post5: {
-                formato: "Foto da natureza/paisagem",
-                tema: "Conexão com o divino",
-                sugestao: "Foto do céu, mar ou plantas com reflexão sobre como a natureza nos conecta com algo maior",
-                hashtags: ["#natureza", "#conexaodivina", "#contemplacao", "#belezanatural", "#momentodeDeus"],
+
+            // OUTUBRO 2025
+            out_s1_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Renovação de Outono",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, com expressões de renovação e esperança, capturando a energia transformadora do outono <br><br><b>Alternativa:</b> Imagens de folhas mudando de cor, árvores em transição, paisagens outonais que simbolizam mudança e renovação",
+                hashtags: ["#renovacao", "#outono", "#transformacao", "#mudanca", "#novaenergia"],
                 horario: "18h",
-                dicas: "💡 Capture durante o golden hour. Use a natureza como metáfora para reflexões espirituais. Seja inclusiva em suas referências."
+                dicas: "💡 Foque na dualidade entre as fotos da Dani e elementos da natureza. Use cores quentes do outono como inspiração."
             },
-            post6: {
-                formato: "Carrossel de fotos com amigos/evento social",
-                tema: "Importância das conexões humanas",
-                sugestao: "Sequência de fotos de um encontro, jantar ou evento, destacando a riqueza dos relacionamentos",
-                hashtags: ["#conexao", "#amizade", "#relacionamentos", "#vibracoespositivas", "#momentoscompartilhados"],
-                horario: "12h",
-                dicas: "💡 Mostre diferentes momentos do encontro. Peça permissão para postar fotos dos amigos. Foque na emoção e conexão genuína."
-            },
-            post7: {
-                formato: "Vídeo da Dani (estilo vlog)",
-                tema: "Pausa e respiração",
-                sugestao: "Dani falando diretamente para a câmera sobre a importância de desacelerar, podendo incluir fotos de momentos de pausa (ondas, vento, natureza) durante a narração",
-                hashtags: ["#pausa", "#respiracao", "#mindfulness", "#pazinterior", "#momentodeluz"],
-                horario: "8h",
-                dicas: "💡 Fale mais devagar que o normal. Inclua momentos de silêncio. Use b-roll de natureza para ilustrar a calma que está transmitindo."
-            },
-            post8: {
-                formato: "Foto pessoal da Dani",
-                tema: "Gratidão pessoal",
-                sugestao: "Foto dela em um momento de gratidão, conectando com alguma conquista ou momento especial",
-                hashtags: ["#gratidao", "#conquistas", "#autoamor", "#reflexoesdiarias", "#forcainterior"],
+            out_s1_qui: {
+                formato: "#TBT",
+                tema: "Memórias de Crescimento",
+                sugestao: "Foto antiga da Dani com reflexão sobre como as experiências passadas moldaram quem ela é hoje, conectando com o tema de crescimento pessoal",
+                hashtags: ["#tbt", "#crescimento", "#memorias", "#jornada", "#evolucao"],
                 horario: "18h",
-                dicas: "💡 Escolha uma conquista recente, pequena ou grande. Seja específica sobre o que te deixa grata. Inspire outros a reconhecerem suas próprias conquistas."
+                dicas: "💡 Escolha uma foto que mostre contraste com o presente. Conte uma história específica de aprendizado ou superação."
             },
-            post9: {
-                formato: "Carrossel de fotos",
-                tema: "Detalhes que encantam",
-                sugestao: "Sequência de fotos de pequenos detalhes bonitos do cotidiano (flores, texturas, luzes)",
-                hashtags: ["#detalhesqueencantam", "#pequenasalegrias", "#belezasimples", "#olhardiferente"],
-                horario: "12h",
-                dicas: "💡 Foque na fotografia macro ou close-up. Brinque com luz e sombra. Cada foto deve contar uma pequena história visual."
-            },
-            post10: {
-                formato: "Vídeo da Dani (estilo vlog)",
-                tema: "Coragem para sonhar",
-                sugestao: "Dani falando diretamente para a câmera sobre ter coragem para seguir sonhos, mesmo quando parece impossível",
-                hashtags: ["#coragem", "#sonhos", "#fe", "#determinacao", "#vivaossonhos"],
-                horario: "8h",
-                dicas: "💡 Compartilhe um sonho pessoal ou uma meta. Seja honesta sobre os medos e desafios. Termine com uma call-to-action inspiradora."
-            },
-            post11: {
-                formato: "Foto de elemento da natureza",
-                tema: "Ciclos da vida",
-                sugestao: "Foto de algo que represente renovação (lua, árvore, flores) com reflexão sobre os ciclos naturais da vida",
-                hashtags: ["#ciclodavida", "#renovacao", "#natureza", "#transformacao", "#crescimento"],
+            out_s1_sex: {
+                formato: "Vídeo da Dani",
+                tema: "Gratidão pelas Pequenas Coisas",
+                sugestao: "Vídeo da Dani falando sobre encontrar beleza e gratidão nos pequenos momentos do cotidiano, talvez mostrando alguns desses momentos",
+                hashtags: ["#gratidao", "#pequenascoisas", "#cotidiano", "#belezasimples", "#mindfulness"],
                 horario: "18h",
-                dicas: "💡 Escolha elementos que mostrem transformação (botões de flor, folhas mudando de cor, fases da lua). Use a natureza como metáfora para mudanças pessoais."
+                dicas: "💡 Filme em diferentes locais durante o dia. Inclua momentos simples como tomar café, observar a natureza, ou um sorriso espontâneo."
             },
-            post12: {
-                formato: "Carrossel de fotos pessoais da Dani",
-                tema: "Celebração de si mesma",
-                sugestao: "Sequência de fotos dela em momentos de alegria, com texto sobre celebrar as próprias conquistas e jornada",
-                hashtags: ["#celebracao", "#autoestima", "#jornada", "#mulheresinspiradoras", "#orgulhodemim"],
-                horario: "12h",
-                dicas: "💡 Crie um carrossel que conte sua jornada. Misture fotos antigas e recentes. Celebre crescimento, não apenas conquistas externas."
-            }
-        };
 
-        function abrirModal(postId) {
-            const post = posts[postId];
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modal-body');
+            out_s2_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Autenticidade",
+                sugestao: "Foto natural da Dani sendo ela mesma, sem poses elaboradas, capturando sua essência autêntica em um momento cotidiano",
+                hashtags: ["#autenticidade", "#vidareal", "#essencia", "#naturalidade", "#servoce"],
+                horario: "18h",
+                dicas: "💡 Evite poses forçadas. Capture um momento espontâneo. A legenda deve ser pessoal e vulnerável."
+            },
+            out_s2_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Força Interior",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo força, determinação e empoderamento feminino <br><br><b>Alternativa:</b> Imagens de elementos poderosos da natureza como montanhas, oceanos em tempestade, ou árvores resistindo ao vento",
+                hashtags: ["#forcainterior", "#empoderamento", "#determinacao", "#mulherforte", "#resilencia"],
+                horario: "18h",
+                dicas: "💡 Contraste a força humana com a força da natureza. Use elementos visuais que transmitam poder e resistência."
+            },
+            out_s2_qui: {
+                formato: "#TBT",
+                tema: "Superação de Desafios",
+                sugestao: "Foto de um momento desafiador do passado com reflexão sobre como a superação trouxe crescimento e sabedoria",
+                hashtags: ["#tbt", "#superacao", "#desafios", "#crescimento", "#sabedoria"],
+                horario: "18h",
+                dicas: "💡 Seja honesta sobre as dificuldades. Mostre como os desafios se tornaram oportunidades de crescimento."
+            },
+            out_s2_sex: {
+                formato: "Vídeo da Dani",
+                tema: "Conexões Humanas",
+                sugestao: "Vídeo sobre a importância das relações humanas genuínas e como elas enriquecem nossa jornada",
+                hashtags: ["#conexoes", "#relacionamentos", "#amizade", "#amor", "#humanidade"],
+                horario: "18h",
+                dicas: "💡 Inclua momentos com pessoas queridas. Fale sobre como as conexões transformam nossa vida."
+            },
 
-            modalBody.innerHTML = `
-                <div class="formato-badge">${post.formato}</div>
-                <h3>${post.tema}</h3>
-                
-                <div class="modal-section">
-                    <h4>📝 Sugestão</h4>
-                    <p>${post.sugestao}</p>
-                </div>
+            out_s3_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Momento de Pausa",
+                sugestao: "Foto da Dani em um momento de contemplação e pausa, talvez meditando, lendo ou simplesmente observando a natureza",
+                hashtags: ["#pausa", "#contemplacao", "#momentopresente", "#paz", "#reflexao"],
+                horario: "18h",
+                dicas: "💡 Capture a serenidade do momento. Use luz suave. A composição deve transmitir calma e introspecção."
+            },
+            out_s3_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Sonhos e Aspirações",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, com expressões sonhadoras e esperançosas, olhando para o futuro <br><br><b>Alternativa:</b> Imagens de céus estrelados, horizontes infinitos, ou caminhos que se perdem na distância, simbolizando possibilidades",
+                hashtags: ["#sonhos", "#aspiracoes", "#futuro", "#esperanca", "#possibilidades"],
+                horario: "18h",
+                dicas: "💡 Jogue com a ideia de infinito e possibilidades. Use elementos que remetam a jornadas e descobertas."
+            },
+            out_s3_qui: {
+                formato: "#TBT",
+                tema: "Primeiras Vezes",
+                sugestao: "Foto de uma 'primeira vez' marcante com reflexão sobre como os primeiros passos moldam nossa coragem para novas experiências",
+                hashtags: ["#tbt", "#primeirasvez", "#coragem", "#novasexperiencias", "#ousadia"],
+                horario: "18h",
+                dicas: "💡 Escolha um momento que marcou um novo capítulo. Conecte com a coragem necessária para começar algo novo."
+            },
+            out_s3_sex: {
+                formato: "Vídeo da Dani",
+                tema: "Aceitação e Amor Próprio",
+                sugestao: "Vídeo sobre a jornada de se aceitar completamente, incluindo imperfeições, e como isso liberta para uma vida mais plena",
+                hashtags: ["#amorproprio", "#aceitacao", "#autoestima", "#liberdade", "#autenticidade"],
+                horario: "18h",
+                dicas: "💡 Seja vulnerável e honesta. Compartilhe sua própria jornada de autoaceitação. Inspire outros a se amarem como são."
+            },
 
-                <div class="modal-section">
-                    <h4>⏰ Horário Recomendado</h4>
-                    <p>${post.horario}</p>
-                </div>
+            out_s4_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Alegria Simples",
+                sugestao: "Foto da Dani sorrindo genuinamente, capturando um momento de alegria pura e espontânea",
+                hashtags: ["#alegria", "#sorriso", "#felicidade", "#momentosimples", "#vibracoespositivas"],
+                horario: "18h",
+                dicas: "💡 Capture um sorriso verdadeiro. A alegria deve ser contagiante. Use cores vibrantes e luz natural."
+            },
+            out_s4_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Equilíbrio e Harmonia",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo serenidade e equilíbrio interior <br><br><b>Alternativa:</b> Imagens de elementos equilibrados na natureza como pedras empilhadas, reflexos na água, ou simetrias naturais",
+                hashtags: ["#equilibrio", "#harmonia", "#serenidade", "#balance", "#pazinterior"],
+                horario: "18h",
+                dicas: "💡 Explore conceitos visuais de equilíbrio. Use simetrias e elementos que transmitam estabilidade e paz."
+            },
+            out_s4_qui: {
+                formato: "#TBT",
+                tema: "Momentos de Descoberta",
+                sugestao: "Foto de um momento de descoberta pessoal do passado com reflexão sobre como essas revelações mudaram sua perspectiva",
+                hashtags: ["#tbt", "#descoberta", "#revelacao", "#perspectiva", "#autoconhecimento"],
+                horario: "18h",
+                dicas: "💡 Compartilhe um momento 'eureka' pessoal. Explique como essa descoberta impactou sua vida."
+            },
+            out_s4_sex: {
+                formato: "Vídeo da Dani",
+                tema: "Propósito e Significado",
+                sugestao: "Vídeo sobre encontrar propósito nas pequenas ações do dia a dia e como cada gesto pode ter significado profundo",
+                hashtags: ["#proposito", "#significado", "#missao", "#impacto", "#vida"],
+                horario: "18h",
+                dicas: "💡 Conecte ações simples com propósitos maiores. Inspire outros a encontrarem significado em suas rotinas."
+            },
 
-                <div class="modal-section">
-                    <h4>💡 Dicas Extras</h4>
-                    <p>${post.dicas}</p>
-                </div>
+            out_s5_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Transformação Pessoal",
+                sugestao: "Foto que represente a transformação pessoal da Dani, talvez em um local significativo ou com um visual que marque uma nova fase",
+                hashtags: ["#transformacao", "#evolucao", "#mudanca", "#crescimento", "#novafase"],
+                horario: "18h",
+                dicas: "💡 Escolha elementos visuais que simbolizem mudança. A foto deve contar uma história de evolução."
+            },
+            out_s5_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Celebração da Vida",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, com expressões de celebração e gratidão pela vida <br><br><b>Alternativa:</b> Imagens festivas da natureza como flores desabrochando, pôr do sol dourado, ou chuva de pétalas",
+                hashtags: ["#celebracao", "#vida", "#gratidao", "#alegria", "#abundancia"],
+                horario: "18h",
+                dicas: "💡 Use cores vibrantes e elementos que remetam à celebração. Transmita energia positiva e gratidão."
+            },
+            out_s5_qui: {
+                formato: "#TBT",
+                tema: "Lições Aprendidas",
+                sugestao: "Foto de um momento do passado que ensinou uma lição valiosa, com reflexão sobre como essa sabedoria se aplica hoje",
+                hashtags: ["#tbt", "#licoes", "#sabedoria", "#aprendizado", "#experiencia"],
+                horario: "18h",
+                dicas: "💡 Escolha uma lição que ainda é relevante hoje. Conecte o passado com o presente de forma significativa."
+            },
+            out_s5_sex: {
+                formato: "Vídeo da Dani",
+                tema: "Preparação para Novembro",
+                sugestao: "Vídeo sobre as expectativas e preparações para o mês que se aproxima, compartilhando planos e sonhos",
+                hashtags: ["#novembro", "#expectativas", "#planos", "#sonhos", "#futuro"],
+                horario: "18h",
+                dicas: "💡 Compartilhe expectativas reais e sonhos. Convide os seguidores a refletirem sobre seus próprios planos."
+            },
 
-                <div class="modal-section">
-                    <h4>#️⃣ Hashtags</h4>
-                    <div class="hashtags">
-                        ${post.hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
-                    </div>
-                </div>
-            `;
+            // NOVEMBRO 2025
+            nov_s2_ter: {
+                formato: "Foto Única da Dani",
+                tema: "Gratidão Profunda",
+                sugestao: "Foto da Dani em um momento de gratidão sincera, talvez com as mãos no coração ou em oração, conectando com o espírito de novembro",
+                hashtags: ["#gratidao", "#novembro", "#agradecimento", "#bencaos", "#fe"],
+                horario: "18h",
+                dicas: "💡 Capture um momento genuíno de gratidão. Use gestos que transmitam reconhecimento e humildade."
+            },
+            nov_s2_qua: {
+                formato: "Carrossel de IA da Dani",
+                tema: "Abundância e Colheita",
+                sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo abundância e satisfação pelas conquistas do ano <br><br><b>Alternativa:</b> Imagens de colheitas, frutas maduras, campos dourados, simbolizando os frutos do trabalho e dedicação",
+                hashtags: ["#abundancia", "#colheita", "#conquistas", "#frutos", "#realizacao"],
+                horario: "18h",
+                dicas: "💡 Use tons dourados e elementos que remetam à colheita. Celebre as conquistas do ano."
+            },
+            nov_s2_qui: {
+                formato: "#TBT",
+                tema: "Momentos de Gratidão",
+                sugestao: "Foto de um momento especial do passado pelo qual a Dani é especialmente grata, com reflexão sobre a importância da gratidão",
+                hashtags: ["#tbt", "#gratidao", "#momentosespeciais", "#memoria", "#agradecimento"],
+                horario: "18h",
+                dicas: "💡 Escolha um momento que ainda traz calor ao coração. Explique por que esse momento é especial."
+             },
+             nov_s2_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Reflexões de Novembro",
+                 sugestao: "Vídeo sobre as reflexões que novembro traz, falando sobre gratidão, família e preparação para o final do ano",
+                 hashtags: ["#novembro", "#reflexoes", "#familia", "#gratidao", "#finaldoano"],
+                 horario: "18h",
+                 dicas: "💡 Conecte com as tradições de novembro. Fale sobre a importância da família e das conexões."
+             },
 
-            modal.style.display = 'block';
-        }
+             nov_s3_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Força e Determinação",
+                 sugestao: "Foto da Dani transmitindo força e determinação, talvez em um momento de superação ou conquista",
+                 hashtags: ["#forca", "#determinacao", "#superacao", "#mulherforte", "#coragem"],
+                 horario: "18h",
+                 dicas: "💡 Use poses que transmitam poder e confiança. A expressão deve ser determinada e inspiradora."
+             },
+             nov_s3_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Preparação para o Futuro",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, com expressões de planejamento e expectativa para o futuro <br><br><b>Alternativa:</b> Imagens de sementes sendo plantadas, estradas se estendendo ao horizonte, ou amanheceres simbolizando novos começos",
+                 hashtags: ["#futuro", "#planejamento", "#expectativas", "#novoscaminhos", "#preparacao"],
+                 horario: "18h",
+                 dicas: "💡 Foque na ideia de preparação e planejamento. Use elementos que remetam a jornadas e crescimento."
+             },
+             nov_s3_qui: {
+                 formato: "#TBT",
+                 tema: "Conquistas do Ano",
+                 sugestao: "Foto de uma conquista importante do ano com reflexão sobre o crescimento e as lições aprendidas",
+                 hashtags: ["#tbt", "#conquistas", "#crescimento", "#orgulho", "#jornada"],
+                 horario: "18h",
+                 dicas: "💡 Celebre uma conquista específica. Seja honesta sobre os desafios enfrentados para alcançá-la."
+             },
+             nov_s3_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Conexão com a Natureza",
+                 sugestao: "Vídeo sobre a importância de se conectar com a natureza e como isso traz paz e clareza mental",
+                 hashtags: ["#natureza", "#conexao", "#paz", "#clareza", "#mindfulness"],
+                 horario: "18h",
+                 dicas: "💡 Filme em um ambiente natural. Fale sobre como a natureza te inspira e acalma."
+             },
 
-        function fecharModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
+             nov_s4_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Simplicidade e Elegância",
+                 sugestao: "Foto da Dani em um momento simples mas elegante, mostrando que a beleza está na simplicidade",
+                 hashtags: ["#simplicidade", "#elegancia", "#beleza", "#naturalidade", "#estilo"],
+                 horario: "18h",
+                 dicas: "💡 Use composição limpa e minimalista. A elegância deve vir da naturalidade, não da ostentação."
+             },
+             nov_s4_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Reflexão e Introspecção",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, em momentos de reflexão profunda e introspecção <br><br><b>Alternativa:</b> Imagens de espelhos d'água, bibliotecas silenciosas, ou jardins zen que convidam à contemplação",
+                 hashtags: ["#reflexao", "#introspeccao", "#autoconhecimento", "#contemplacao", "#sabedoria"],
+                 horario: "18h",
+                 dicas: "💡 Use tons suaves e elementos que transmitam calma e profundidade. Convide à reflexão."
+             },
+             nov_s4_qui: {
+                 formato: "#TBT",
+                 tema: "Amizades Verdadeiras",
+                 sugestao: "Foto com amigos especiais do passado com reflexão sobre a importância das amizades verdadeiras na nossa jornada",
+                 hashtags: ["#tbt", "#amizade", "#conexoes", "#lealdade", "#amor"],
+                 horario: "18h",
+                 dicas: "💡 Escolha uma foto que mostre conexão genuína. Fale sobre como essas pessoas impactaram sua vida."
+             },
+             nov_s4_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Preparação para Dezembro",
+                 sugestao: "Vídeo sobre as expectativas para dezembro, falando sobre sonhos, metas e a energia especial do último mês do ano",
+                 hashtags: ["#dezembro", "#expectativas", "#sonhos", "#metas", "#finaldoano"],
+                 horario: "18h",
+                 dicas: "💡 Transmita energia positiva e expectativa. Convide os seguidores a refletirem sobre seus próprios sonhos."
+             },
 
-        // Fechar modal clicando fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
+             nov_s5_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Gratidão pelas Experiências",
+                 sugestao: "Foto da Dani em um momento de gratidão pelas experiências vividas, mostrando maturidade e sabedoria",
+                 hashtags: ["#gratidao", "#experiencias", "#sabedoria", "#maturidade", "#vida"],
+                 horario: "18h",
+                 dicas: "💡 Capture um momento de serenidade e gratidão. A expressão deve transmitir paz e reconhecimento."
+             },
+             nov_s5_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Fechamento de Ciclos",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo a sensação de fechamento de ciclos e preparação para novos começos <br><br><b>Alternativa:</b> Imagens de folhas caindo, livros sendo fechados, ou portões se abrindo para novos caminhos",
+                 hashtags: ["#fechamentodeciclos", "#novoscomecos", "#transformacao", "#renovacao", "#crescimento"],
+                 horario: "18h",
+                 dicas: "💡 Jogue com a dualidade entre fim e começo. Use elementos que simbolizem transição e renovação."
+             },
+             nov_s5_qui: {
+                 formato: "#TBT",
+                 tema: "Momentos Marcantes do Ano",
+                 sugestao: "Foto de um dos momentos mais marcantes do ano com reflexão sobre como esses momentos nos definem",
+                 hashtags: ["#tbt", "#momentosmarcantes", "#memorias", "#definicao", "#impacto"],
+                 horario: "18h",
+                 dicas: "💡 Escolha um momento que realmente marcou o ano. Explique por que foi tão significativo."
+             },
+             nov_s5_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Balanço de Novembro",
+                 sugestao: "Vídeo fazendo um balanço do mês de novembro, compartilhando aprendizados e preparando para dezembro",
+                 hashtags: ["#balanco", "#novembro", "#aprendizados", "#crescimento", "#preparacao"],
+                 horario: "18h",
+                 dicas: "💡 Seja honesta sobre os altos e baixos do mês. Compartilhe lições específicas aprendidas."
+             },
 
-        // Fechar modal com ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                fecharModal();
-            }
-        });
-    </script>
-</body>
-</html>
+             // DEZEMBRO 2025
+             dez_s1_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Energia de Dezembro",
+                 sugestao: "Foto da Dani capturando a energia especial e mágica que dezembro traz, com um sorriso radiante",
+                 hashtags: ["#dezembro", "#energia", "#magia", "#alegria", "#finaldoano"],
+                 horario: "18h",
+                 dicas: "💡 Capture a energia festiva e especial de dezembro. Use elementos que remetam à época natalina."
+             },
+             dez_s1_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Espírito Natalino",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo o espírito natalino de amor, paz e união <br><br><b>Alternativa:</b> Imagens de luzes natalinas, árvores decoradas, ou cenas aconchegantes que remetem ao Natal",
+                 hashtags: ["#natal", "#amor", "#paz", "#uniao", "#esperanca"],
+                 horario: "18h",
+                 dicas: "💡 Use cores quentes e elementos natalinos. Transmita a magia e o aconchego da época."
+             },
+             dez_s1_qui: {
+                 formato: "#TBT",
+                 tema: "Natais Especiais",
+                 sugestao: "Foto de um Natal especial do passado com reflexão sobre a importância das tradições e da família",
+                 hashtags: ["#tbt", "#natal", "#familia", "#tradicoes", "#memorias"],
+                 horario: "18h",
+                 dicas: "💡 Escolha uma foto que traga boas memórias natalinas. Fale sobre a importância das tradições familiares."
+             },
+             dez_s1_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Reflexões de Final de Ano",
+                 sugestao: "Vídeo sobre as reflexões que o final do ano traz, falando sobre crescimento, gratidão e expectativas",
+                 hashtags: ["#finaldoano", "#reflexoes", "#crescimento", "#gratidao", "#expectativas"],
+                 horario: "18h",
+                 dicas: "💡 Seja profunda e reflexiva. Compartilhe insights genuínos sobre o ano que passou."
+             },
+
+             dez_s2_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Generosidade e Amor",
+                 sugestao: "Foto da Dani em um momento que transmita generosidade e amor, conectando com o espírito natalino",
+                 hashtags: ["#generosidade", "#amor", "#doacao", "#solidariedade", "#coracao"],
+                 horario: "18h",
+                 dicas: "💡 Capture um momento de doação ou carinho. A foto deve transmitir calor humano e generosidade."
+             },
+             dez_s2_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Sonhos para o Novo Ano",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, com expressões sonhadoras e esperançosas para o novo ano <br><br><b>Alternativa:</b> Imagens de fogos de artifício, calendários novos, ou amanheceres simbolizando novos começos",
+                 hashtags: ["#sonhos", "#novoano", "#esperanca", "#metas", "#futuro"],
+                 horario: "18h",
+                 dicas: "💡 Foque na expectativa e nos sonhos para o ano que vem. Use elementos que simbolizem renovação."
+             },
+             dez_s2_qui: {
+                 formato: "#TBT",
+                 tema: "Crescimento do Ano",
+                 sugestao: "Foto do início do ano comparando com o crescimento atual, mostrando a evolução pessoal",
+                 hashtags: ["#tbt", "#crescimento", "#evolucao", "#transformacao", "#jornada"],
+                 horario: "18h",
+                 dicas: "💡 Mostre claramente a diferença entre o início e o final do ano. Celebre o crescimento pessoal."
+             },
+             dez_s2_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Gratidão pelo Ano",
+                 sugestao: "Vídeo expressando gratidão por tudo que o ano trouxe, incluindo desafios e conquistas",
+                 hashtags: ["#gratidao", "#ano", "#conquistas", "#desafios", "#aprendizado"],
+                 horario: "18h",
+                 dicas: "💡 Seja específica sobre o que te deixa grata. Inclua tanto os momentos bons quanto os desafiadores."
+             },
+
+             dez_s3_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Paz Interior",
+                 sugestao: "Foto da Dani transmitindo paz interior e serenidade, mostrando o equilíbrio alcançado ao final do ano",
+                 hashtags: ["#pazinterior", "#serenidade", "#equilibrio", "#harmonia", "#plenitude"],
+                 horario: "18h",
+                 dicas: "💡 Capture um momento de profunda serenidade. A composição deve transmitir calma e equilíbrio."
+             },
+             dez_s3_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Celebração da Vida",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, celebrando a vida e todas as suas nuances <br><br><b>Alternativa:</b> Imagens de celebrações, flores em festa, ou momentos de pura alegria e gratidão pela vida",
+                 hashtags: ["#celebracao", "#vida", "#alegria", "#gratidao", "#plenitude"],
+                 horario: "18h",
+                 dicas: "💡 Use cores vibrantes e elementos festivos. Transmita alegria genuína e celebração da existência."
+             },
+             dez_s3_qui: {
+                 formato: "#TBT",
+                 tema: "Momentos de Superação",
+                 sugestao: "Foto de um momento de superação importante do ano com reflexão sobre a força interior descoberta",
+                 hashtags: ["#tbt", "#superacao", "#forca", "#resilencia", "#vitoria"],
+                 horario: "18h",
+                 dicas: "💡 Escolha um momento que mostrou sua força interior. Inspire outros com sua história de superação."
+             },
+             dez_s3_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Preparação para 2026",
+                 sugestao: "Vídeo sobre os preparativos e expectativas para o novo ano, compartilhando sonhos e metas",
+                 hashtags: ["#2026", "#preparacao", "#sonhos", "#metas", "#novoano"],
+                 horario: "18h",
+                 dicas: "💡 Compartilhe metas específicas e realistas. Convide os seguidores a planejarem junto com você."
+             },
+
+             dez_s4_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Véspera de Natal",
+                 sugestao: "Foto especial da véspera de Natal, capturando a magia e expectativa desta data única",
+                 hashtags: ["#vesperadeNatal", "#magia", "#expectativa", "#familia", "#amor"],
+                 horario: "18h",
+                 dicas: "💡 Capture a magia única da véspera de Natal. Use elementos que remetam à tradição e ao aconchego."
+             },
+             dez_s4_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Natal - Amor e União",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, transmitindo o verdadeiro espírito natalino de amor e união <br><br><b>Alternativa:</b> Imagens de mesas fartas, abraços calorosos, ou momentos de união familiar que definem o Natal",
+                 hashtags: ["#natal", "#amor", "#uniao", "#familia", "#tradicao"],
+                 horario: "18h",
+                 dicas: "💡 Foque no verdadeiro significado do Natal. Use elementos que transmitam união e amor familiar."
+             },
+             dez_s4_sex: {
+                 formato: "Vídeo da Dani",
+                 tema: "Mensagem de Natal",
+                 sugestao: "Vídeo especial de Natal com mensagem de amor, paz e esperança para todos os seguidores",
+                 hashtags: ["#natal", "#mensagem", "#amor", "#paz", "#esperanca"],
+                 horario: "18h",
+                 dicas: "💡 Seja calorosa e acolhedora. Transmita uma mensagem universal de amor e esperança."
+             },
+
+             dez_s5_ter: {
+                 formato: "Foto Única da Dani",
+                 tema: "Últimos Dias do Ano",
+                 sugestao: "Foto reflexiva dos últimos dias do ano, mostrando gratidão e preparação para o novo ciclo",
+                 hashtags: ["#ultimosdias", "#reflexao", "#gratidao", "#preparacao", "#novociclo"],
+                 horario: "18h",
+                 dicas: "💡 Capture um momento de reflexão profunda. A foto deve transmitir fechamento e preparação."
+             },
+             dez_s5_qua: {
+                 formato: "Carrossel de IA da Dani",
+                 tema: "Despedida do Ano",
+                 sugestao: "<b>Principal:</b> Carrossel de fotos da Dani geradas por IA, se despedindo do ano com gratidão e expectativa <br><br><b>Alternativa:</b> Imagens de pôr do sol, páginas sendo viradas, ou portões se fechando simbolizando o fim de um ciclo",
+                 hashtags: ["#despedida", "#ano", "#gratidao", "#expectativa", "#novociclo"],
+                 horario: "18h",
+                 dicas: "💡 Jogue com a dualidade entre despedida e expectativa. Use elementos que simbolizem transição."
+             }
+         };
+
+         function abrirModal(postId) {
+             const post = posts[postId];
+             const modal = document.getElementById('modal');
+             const modalBody = document.getElementById('modal-body');
+
+             if (!post) {
+                 console.error('Post não encontrado:', postId);
+                 return;
+             }
+
+             modalBody.innerHTML = `
+                 <div class="formato-badge">${post.formato}</div>
+                 <h3>${post.tema}</h3>
+                 
+                 <div class="modal-section">
+                     <h4>📝 Sugestão</h4>
+                     <p>${post.sugestao}</p>
+                 </div>
+
+                 <div class="modal-section">
+                     <h4>⏰ Horário Recomendado</h4>
+                     <p>${post.horario}</p>
+                 </div>
+
+                 <div class="modal-section">
+                     <h4>💡 Dicas Extras</h4>
+                     <p>${post.dicas}</p>
+                 </div>
+
+                 <div class="modal-section">
+                     <h4>#️⃣ Hashtags</h4>
+                     <div class="hashtags">
+                         ${post.hashtags.map(tag => `<span class="hashtag">${tag}</span>`).join('')}
+                     </div>
+                 </div>
+             `;
+
+             modal.style.display = 'block';
+         }
+
+         function fecharModal() {
+             document.getElementById('modal').style.display = 'none';
+         }
+
+         // Fechar modal clicando fora
+         window.onclick = function(event) {
+             const modal = document.getElementById('modal');
+             if (event.target == modal) {
+                 modal.style.display = 'none';
+             }
+         }
+
+         // Fechar modal com ESC
+         document.addEventListener('keydown', function(event) {
+             if (event.key === 'Escape') {
+                 fecharModal();
+             }
+         });
+     </script>
+ </body>
+ </html>
